@@ -32,6 +32,12 @@
   20% { transform: skewX(0deg); }
   100% { transform: skewX(0deg); }  
 }
+.masthead-avatar {
+  vertical-align: middle;
+  width: 20px;
+  height: 250px;
+  border-radius: 50%;
+}
 /*li {
   list-style-type: none;
   position: relative;
