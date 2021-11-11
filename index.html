@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="css/heading.css">
         <link rel="stylesheet" href="css/body.css">
     </head>
-    <body id="page-top">
+    <body id="page-top" onload="add_screen_notice()">
         <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
             <div class="container"><a class="navbar-brand js-scroll-trigger" href="#page-top">WeNeSa</a>
                 <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
@@ -25,10 +25,11 @@
                         </li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">ABOUT</a>
                         </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">CONTACT</a>
+                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#projects_gallery">PROJECTS GALLERY</a>
                         </li>
-                        <!-- <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#projects">PROJECTS</a>
-                        </li> -->
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">CONTACT US</a>
+                        </li>
+                       
                     </ul>
                 </div>
             </div>
@@ -365,6 +366,81 @@
                 </div>
             </div>
         </section>
+        <section class="page-section" id="projects_gallery">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="page-section-heading text-secondary d-inline-block mb-0">PROJECTS GALLERY</h2>
+                </div>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <img src="assets/img/projects/demo1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                    </div>
+                    <div class="column">
+                        <img src="assets/img/projects/demo1.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                    </div>
+                    <div class="column">
+                        <img src="assets/img/projects/demo1.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                    </div>
+                    <div class="column">
+                        <img src="assets/img/projects/demo1.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                    </div>
+                </div> 
+                <div id="myModal" class="project_modal">
+                    <h3 id="big_screen_notice" style="text-align: center;"></h3>
+                  <div class="project_modal-content">
+
+                    <button class="close" type="button" onclick="closeModal()" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
+                    <div class="mySlides">
+                      <div class="numbertext">1 / 4</div>
+                      <img src="assets/img/projects/demo1.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                      <div class="numbertext">2 / 4</div>
+                      <img src="assets/img/projects/demo1.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                      <div class="numbertext">3 / 4</div>
+                      <img src="assets/img/projects/demo1.jpg" style="width:100%">
+                    </div>
+                    
+                    <div class="mySlides">
+                      <div class="numbertext">4 / 4</div>
+                      <img src="assets/img/projects/demo1.jpg" style="width:100%">
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <div class="caption-container">
+                      <h3 id="caption"></h3>
+                    </div>
+
+
+                    <div class="column">
+                      <img class="demo cursor" src="assets/img/projects/demo1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="assets/img/projects/demo1.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="assets/img/projects/demo1.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="assets/img/projects/demo1.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </section>
+
         <section class="page-section" id="contact">
             <div class="container">
                 <!-- Contact Section Heading-->
@@ -388,6 +464,7 @@
                 </div>
             </div>
         </section>
+
         <footer class="footer text-center">
             <div class="container">
                 <div class="row">
